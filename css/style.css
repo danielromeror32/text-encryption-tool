@@ -5,12 +5,12 @@ textarea{
     
 }
 
-.message{
+.firstPanel{
     position: relative;
     Display: inline-block; 
 }
 
-.answer{
+.secondPanel{
     Display: inline-block; 
     background-color:cadetblue;
     width: 400px;
@@ -31,7 +31,7 @@ textarea{
     top: 30px;
 }
 
-.p-decrypt{
+.displayText{
     position: absolute;
     margin: 50px;
     font-family: 'Roboto Mono', monospace;
