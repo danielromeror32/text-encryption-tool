@@ -2,7 +2,7 @@ const buttonEncip = document.querySelector("#firstButton");
 const buttonDesc = document.querySelector("#secondtButton");
 
 let textEncryption = "Ningún mensaje fue encontrado";
-let textDecryption;
+let textDecryption = "Ningún mensaje fue encontrado";
 
 // button event Encryption
 buttonEncip.addEventListener("click", function() {
