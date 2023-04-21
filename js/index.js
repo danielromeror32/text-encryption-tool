@@ -1,6 +1,9 @@
 const buttonEncip = document.querySelector("#firstButton");
 const buttonDesc = document.querySelector("#secondtButton");
-const buttonCopy = document.querySelector(".buttom-decrypt");
+const buttonCopy = document.querySelector(".buttom-decrypt"); // BUTTON COPY
+
+// const textScondPanel = document.querySelector(".displayText").textContent;
+var textScondPanel = document.querySelector(".displayText").textContent;
 
 let textEncryption ;
 let textDecryption ;
@@ -11,11 +14,18 @@ buttonEncip.addEventListener("click", function() {
     textEncryption = getText("textarea"); 
     textDecryption = setText(textEncryption);
   });
+
 // button event copy
-buttonCopy.addEventListener("click", function() {
-  textCopied = getTextLabel(".displayText");
-  // alert(textCopied);
-});
+function copyToClipboard() {
+  const el = document.createElement('textarea');
+  el.value = document.querySelector(".displayText").textContent;
+  document.body.appendChild(el);
+  textCopied = el;
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+}
+
 // button event Decryption
 buttonDesc.addEventListener("click", function() {
   // textDecryption = setText(textEncryption); 
@@ -46,11 +56,11 @@ function getText(area){
 }
 
 
-function getTextLabel (area){
-  let extractText = document.querySelector(area);
-  var text = extractText.textContent;
-  return text;
-}
+// function getTextLabel (area){
+//   let extractText = document.querySelector(area);
+//   var text = extractText.textContent;
+//   return text;
+// }
 function setTextLabel (area){
 
   document.querySelector(".displayText").textContent = area;
@@ -59,7 +69,7 @@ function setTextLabel (area){
 
 
 
-
+// Funcion para encriptar 
 function encryptionWord  (palabra){
   
   let newTextArray = [];
@@ -103,7 +113,7 @@ const dictionary = {
   "o": "ober",
   "u": "ufat"
 }
-
+// Funcion para desencriptar  
 function decryptionWord (word){
   let palabra = word;
   // palabra = palabra.replace("ai", "a");
