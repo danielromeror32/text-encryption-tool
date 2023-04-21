@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello world !</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador Online</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="firstPanel">
+          <!-- Texto encriptado -->
+          <h1>Encriptador Online</h1>
+
+          <textarea required placeholder="Ingrese el texto aquí"></textarea>
+          <input
+            class="button"
+            id="firstButton"
+            type="submit"
+            value="Encriptar"
+          />
+          <input
+            class="button a"
+            id="secondtButton"
+            type="submit"
+            value="Desencriptar"
+          />
+        </div>
+
+        <div class="secondPanel">
+          <div class="frame-decrypt innerPanel">
+            <p class="displayText">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
+              montes, sit et diam risus scelerisque vitae est. Tortor maecenas
+              nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla
+              sit elit. Libero, sodales duis fames id diam feugiat aliquet non
+              egestas
+            </p>
+          </div>
+          <input class="button buttom-decrypt" type="submit" value="Devolver" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- margen -->
+    </footer>
+    <script src="/js/index.js"></script>
+  </body>
 </html>

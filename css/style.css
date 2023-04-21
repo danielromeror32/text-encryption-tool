@@ -1,0 +1,50 @@
+textarea{
+    Display: block; 
+    width: 500px;
+    height: 500px;
+    
+}
+
+.firstPanel{
+    position: relative;
+    Display: inline-block; 
+}
+
+.secondPanel{
+    Display: inline-block; 
+    background-color:cadetblue;
+    width: 400px;
+    height: 944px;
+    margin: 20px 130px;
+    position: absolute;
+    left: 60%;
+     
+
+}
+.frame-decrypt{
+    position: absolute;
+    width: 336px;
+    height: 781px;
+    background-color: brown;
+    left:32px ;
+    top: 81.5px;
+    top: 30px;
+}
+
+.displayText{
+    position: absolute;
+    margin: 50px;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+
+.buttom-decrypt{
+    position: absolute;
+    bottom:1px;
+   
+}
+
+.button{
+    margin-top: 20px;
+
+}
