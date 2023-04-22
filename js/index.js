@@ -20,7 +20,6 @@ function copyToClipboard() {
   const el = document.createElement('textarea');
   el.value = document.querySelector(".displayText").textContent;
   document.body.appendChild(el);
-  textCopied = el;
   el.select();
   document.execCommand('copy');
   document.body.removeChild(el);
@@ -29,12 +28,15 @@ function copyToClipboard() {
 // button event Decryption
 buttonDesc.addEventListener("click", function() {
   // textDecryption = setText(textEncryption); 
-  textDecryption = decryptionWord(textCopied); // console
-  textEncryption = setTextLabel(textDecryption);
+  // textDecryption = decryptionWord(textCopied);
+  textEncryption = getText("textarea"); // extraer texto 
+  textDecryption = setTextLabel(textEncryption);
+  // console
+  // textDecryption = setTextLabel(textEncryption);
+  // textDecryption = decryptionWord(textEncryption); // desencriptar devuelve nuevo valor 
+  // mostrar en 2do panel 
+
 });
-
-
-
 
 
 // Function for pass text to second panel 
@@ -63,7 +65,8 @@ function getText(area){
 // }
 function setTextLabel (area){
 
-  document.querySelector(".displayText").textContent = area;
+  textDecryption = decryptionWord(textEncryption);
+  document.querySelector(".displayText").textContent = textDecryption; // print at second panel 
   
 }
 
@@ -71,7 +74,6 @@ function setTextLabel (area){
 
 // Funcion para encriptar 
 function encryptionWord  (palabra){
-  
   let newTextArray = [];
   // let textArray = textEncryption.split("");
   let textArray = palabra.split("");
@@ -123,5 +125,6 @@ function decryptionWord (word){
     palabra = palabra.replace(dictionary[property], property);
     // console.log((dictionary[property]+ ": " +  property));
   }
-  console.log(palabra);
+  // console.log(palabra);
+  return palabra; 
 }

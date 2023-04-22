@@ -1,3 +1,11 @@
+body{
+    background-color: #E5E5E5;
+}
+
+h1{
+    color: #0A3871;
+}
+
 textarea{
     Display: block; 
     width: 500px;

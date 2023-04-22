@@ -16,35 +16,35 @@
   <body>
     <header></header>
     <main>
-      <div>
-        <div class="firstPanel">
-          <!-- Texto encriptado -->
-          <h1>Encriptador Online</h1>
+      <div class="firstPanel">
+        <!-- Texto encriptado -->
+        <h1>Encrypt Text Online</h1>
 
-          <textarea required placeholder="Ingrese el texto aquí"></textarea>
-          <input
-            class="button"
-            id="firstButton"
-            type="submit"
-            value="Encriptar"
-          />
-          <input
-            class="button"
-            id="secondtButton"
-            type="submit"
-            value="Desencriptar"
-          />
-        </div>
+        <textarea required placeholder="Ingrese el texto aquí"></textarea>
+        <!-- <input
+          class="button"
+          id="firstButton"
+          type="submit"
+          value="Encriptar"
+        /> -->
+        <button class="button" id="firstButton" value="Encriptar">Encriptar</button>
+        <button class="button" id="secondtButton" value="Encriptar">Desencriptar</button>
+        <!-- <input
+          class="button"
+          id="secondtButton"
+          type="submit"
+          value="Desencriptar"
+        /> -->
+      </div>
 
-        <div class="secondPanel">
-          <div class="frame-decrypt innerPanel">
-            <p class="displayText">Ningún mensaje fue encontrado</p>
-          </div>
-          <!--  <input class="button buttom-decrypt" type="submit" value="copiar" />  -->
-          <button class="button buttom-decrypt" onclick="copyToClipboard()">
-            Copy
-          </button>
+      <div class="secondPanel">
+        <div class="frame-decrypt innerPanel">
+          <p class="displayText">Ningún mensaje fue encontrado</p>
         </div>
+        <!--  <input class="button buttom-decrypt" type="submit" value="copiar" />  -->
+        <button class="button buttom-decrypt" onclick="copyToClipboard()">
+          Copy
+        </button>
       </div>
     </main>
     <footer>
