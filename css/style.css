@@ -1,58 +1,101 @@
 body{
+    font-family: 'Fira Code', monospace;
+    /* font-family: 'Roboto Mono', monospace; */
     background-color: #E5E5E5;
+    margin-top: 10px;
 }
 
 h1{
+    margin-top: 30px;
+    margin-left: 90px;
     color: #0A3871;
-}
+    margin-bottom: 3rem;;
+    font-size: 32px;
 
-textarea{
-    Display: block; 
-    width: 500px;
-    height: 500px;
-    
+}
+/* div {
+    display: inline-block;
+    width: 40%;
+  } */
+
+/* .container{
+    background-color: #B2A4FF;
+     width: 80%; 
+    text-align: center;
+    margin: 0 auto;
+} */
+
+
+.container{
+    /* background-color: aquamarine; */
+    width: auto;
+    height: 944px;
+    height: 660px;
 }
 
 .firstPanel{
-    position: relative;
-    Display: inline-block; 
+    
+    background-color: #0A3871;
+    float: left;
+    width: 680px;
+    height: 80%;
+    margin: 10px 0px 0 100px;
+    /* padding: 10px; */
+    
 }
+
+textarea{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 22px;
+    color: #0A3871;
+    background-color: #E5E5E5;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    resize: none;
+    width: 680px;
+    height: 40%;
+}
+
+textarea::placeholder {
+    color: #0A3871;
+  }
+  textarea:focus {
+    outline: none;
+  }
 
 .secondPanel{
-    Display: inline-block; 
-    background-color:cadetblue;
-    width: 400px;
-    height: 944px;
-    margin: 20px 130px;
-    position: absolute;
-    left: 60%;
-     
 
+    background-color:cadetblue;
+    float: right;
+    width: 400px;
+    height: 80%;
+    margin: 10px 32px 0 0px;
+    /* margin-left: 50%; */
+    /* float: right; */
+   
+    
 }
-.frame-decrypt{
-    position: absolute;
-    width: 336px;
-    height: 781px;
+.btnFirstPanel{
+    
+    position: relative;
+    top: 300px;
+    text-align: justify;
+}
+button{
+    display: inline-block;
+}
+
+.innerPanel{
     background-color: brown;
-    left:32px ;
-    top: 81.5px;
-    top: 30px;
+    /* display: inline; */
 }
+
 
 .displayText{
-    position: absolute;
-    margin: 50px;
-    font-family: 'Roboto Mono', monospace;
+    
+    
+    
     color: white;
 }
 
-.buttom-decrypt{
-    position: absolute;
-    bottom:1px;
-   
-}
-
-.button{
-    margin-top: 20px;
-
-}

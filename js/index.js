@@ -8,6 +8,7 @@ var textScondPanel = document.querySelector(".displayText").textContent;
 let textEncryption ;
 let textDecryption ;
 let textCopied;
+let count= 0;
 
 // button event Encryption
 buttonEncip.addEventListener("click", function() {
@@ -70,7 +71,13 @@ function setTextLabel (area){
   
 }
 
-
+function delateAreaText() {
+  if (count === 0){
+    document.querySelector("#textArea").value = " ";
+    count++;
+  }
+  
+}
 
 // Funcion para encriptar 
 function encryptionWord  (palabra){

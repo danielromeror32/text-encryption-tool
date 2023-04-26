@@ -16,35 +16,37 @@
   <body>
     <header></header>
     <main>
-      <div class="firstPanel">
-        <!-- Texto encriptado -->
+      <div class="container">
         <h1>Encrypt Text Online</h1>
 
-        <textarea required placeholder="Ingrese el texto aquí"></textarea>
-        <!-- <input
-          class="button"
-          id="firstButton"
-          type="submit"
-          value="Encriptar"
-        /> -->
-        <button class="button" id="firstButton" value="Encriptar">Encriptar</button>
-        <button class="button" id="secondtButton" value="Encriptar">Desencriptar</button>
-        <!-- <input
-          class="button"
-          id="secondtButton"
-          type="submit"
-          value="Desencriptar"
-        /> -->
-      </div>
+        <div class="firstPanel">
+          <!-- Texto encriptado -->
 
-      <div class="secondPanel">
-        <div class="frame-decrypt innerPanel">
-          <p class="displayText">Ningún mensaje fue encontrado</p>
+          <textarea
+            id="textArea"
+            onclick="delateAreaText()"
+            required
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+          <div class="btnFirstPanel">
+            <button class="button" id="firstButton" value="Encriptar">
+              Encriptar
+            </button>
+            <button class="button" id="secondtButton" value="Encriptar">
+              Desencriptar
+            </button>
+          </div>
         </div>
-        <!--  <input class="button buttom-decrypt" type="submit" value="copiar" />  -->
-        <button class="button buttom-decrypt" onclick="copyToClipboard()">
-          Copy
-        </button>
+
+        <div class="secondPanel">
+          <div class="innerPanel">
+            <p class="displayText">a</p>
+          </div>
+          <!--  <input class="button buttom-decrypt" type="submit" value="copiar" />  -->
+          <button class="button buttom-decrypt" onclick="copyToClipboard()">
+            Copy
+          </button>
+        </div>
       </div>
     </main>
     <footer>
