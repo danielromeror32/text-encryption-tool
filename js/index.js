@@ -1,7 +1,7 @@
 const buttonEncip = document.querySelector("#firstButton");
 const buttonDesc = document.querySelector("#secondtButton");
 const buttonCopy = document.querySelector(".buttom-decrypt"); // BUTTON COPY
-
+const textArea =document.querySelector("#textArea");
 // const textScondPanel = document.querySelector(".displayText").textContent;
 var textScondPanel = document.querySelector(".displayText").textContent;
 
@@ -70,13 +70,14 @@ function setTextLabel (area){
   document.querySelector(".displayText").textContent = textDecryption; // print at second panel 
   
 }
-
+// Funcion styles to textArea
 function delateAreaText() {
+
   if (count === 0){
-    document.querySelector("#textArea").value = " ";
+    textArea.value = " ";
     count++;
   }
-  
+  textArea.classList.add("editTextArea");
 }
 
 // Funcion para encriptar 

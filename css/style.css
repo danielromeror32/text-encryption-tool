@@ -7,7 +7,7 @@ body{
 
 h1{
     margin-top: 30px;
-    margin-left: 90px;
+    margin-left: 12px;
     color: #0A3871;
     margin-bottom: 3rem;;
     font-size: 32px;
@@ -35,9 +35,9 @@ h1{
 
 .firstPanel{
     
-    background-color: #0A3871;
+    /* background-color: #0A3871; */
     float: left;
-    width: 680px;
+    width: 660px;
     height: 80%;
     margin: 10px 0px 0 100px;
     /* padding: 10px; */
@@ -51,44 +51,82 @@ textarea{
     background-color: #E5E5E5;
     border: 0;
     margin: 0;
-    padding: 0;
+    padding-top: 40px;
+    padding-left: 30px;
     resize: none;
-    width: 680px;
-    height: 40%;
+    width: 630px;
+    height: 70%;
 }
 
 textarea::placeholder {
     color: #0A3871;
   }
-  textarea:focus {
-    outline: none;
-  }
+textarea:focus {
+outline: none;
+}
+
+.editTextArea{
+    border: 1px solid #355A88;
+    border-radius: 20px;
+}
 
 .secondPanel{
-
     background-color:cadetblue;
+    border-radius: 20px;
     float: right;
     width: 400px;
-    height: 80%;
+    height: 95%;
     margin: 10px 32px 0 0px;
-    /* margin-left: 50%; */
-    /* float: right; */
-   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:center;
     
 }
 .btnFirstPanel{
-    
-    position: relative;
-    top: 300px;
     text-align: justify;
 }
-button{
+#firstButton{
     display: inline-block;
+    background-color: #1A237E;
+    margin:10px 0 0 30px; 
 }
+#secondtButton{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    margin:10px 0 0 30px; 
+}
+
+button{
+    color: white;
+    border: 1px solid #1A237E;
+    font-size: 20px; /* aumenta el tamaño del texto */
+    padding: 10px 5px; /* aumenta el tamaño del área de clickeo */
+    width: 230px;
+    height: 60px;
+    border-radius: 20px;
+    
+    
+}
+.buttom-decrypt{
+    background-color: white;
+    color: black;
+    margin-top: 60px;
+}
+
+.buttom-decrypt:hover , #firstButton:hover, 
+#secondtButton:hover {
+    background-color: #808080;
+    color: white;
+    border: 0;
+  }
+
 
 .innerPanel{
     background-color: brown;
-    /* display: inline; */
+    width: 90%;
+    height: 446px;
 }
 
 
@@ -99,3 +137,8 @@ button{
     color: white;
 }
 
+footer{
+    clear: both;
+    text-align: center;
+    background-color: blueviolet;
+}
