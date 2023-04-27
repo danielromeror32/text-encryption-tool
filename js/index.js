@@ -47,6 +47,7 @@ function setText (text){
     // set word 
     document.querySelector(".displayText").textContent = wordEncript;
     
+    // Aparecer y desaparecer logo de inicio 
     let logoNone = document.querySelector(".logoLookMessage").style.display = "none";
     document.querySelector(".innerPanel").style.display = "block";
     
@@ -63,13 +64,12 @@ function getText(area){
 }
 
 
-// function getTextLabel (area){
-//   let extractText = document.querySelector(area);
-//   var text = extractText.textContent;
-//   return text;
-// }
+// Funcion for decryption 
 function setTextLabel (area){
-
+  // Aparecer y desaparecer logo de inicio 
+  let logoNone = document.querySelector(".logoLookMessage").style.display = "none";
+  document.querySelector(".innerPanel").style.display = "block";
+  // Desencriptar y enviar a panel 2
   textDecryption = decryptionWord(textEncryption);
   document.querySelector(".displayText").textContent = textDecryption; // print at second panel 
   
@@ -84,6 +84,7 @@ function delateAreaText() {
   // textArea.value = " ";
   textArea.classList.add("editTextArea");
 }
+
 
 // Funcion para encriptar 
 function encryptionWord  (palabra){
@@ -122,80 +123,30 @@ function encryptionWord  (palabra){
 
 
 const dict = {
-  "e": "enter", 
   "o": "ober",
-  "i": "imes",
   "a": "ai",
-  "u": "ufat"
+  "e": "enter", 
+  "i": "imes",  
+  "u": "ufat",
 }
 
 function decryptionWord (word){
-  // word:  j ober enter n enter s -  joberventernenters
-  // joven enter s
-  const values = Object.values(dict);
-  const keys = Object.keys(dict);
-  let wordArray = word.split("");
-  let newWord = [];
-  // let resultado =;
-
-  let veri=true;
-  for (let index = 0; index <= values.length; index++) {
-    // const element = wordArray[index];
-
-    // while(word.includes(values[index2]){
-      
-    
-    while (veri === true){
-      if(word.includes(values[index]) ){
-        word = word.replace(values[index], keys[index]);
-        veri=true;
+  // word:  j ober enter n enter s -  joberventernenters resultado esperado:jovenes
+  const values = Object.values(dict); // enter, oober, imes, ai, ufat
+  const keys = Object.keys(dict); // e, o, i, a , u
+  let check = true;
+  for (let index = 0; index <= values.length; index++) {  // 5 
+    check = true;
+    while (check === true){ 
+      if(word.includes(values[index]) ){ // joberv e rn e s == values [0] enter 
+        word = word.replace(values[index], keys[index]); // joberv e rn e s
       }else{
-          veri=false;
-        }
-      } 
-      if(word.includes(values[index]) ){
-        word = word.replace(values[index], keys[index]);
+        check = false;
       }
-    
-
-
-
-    
-    // if(word.includes(values[index]) ){
-    //   word = word.replace(values[index], keys[index]);
-    // }
+    }
   } 
     console.log(word);
-    }
+    return(word);
+}
+
     
-    // return word; 
-  
-  
-
-
-  
-
-
-
-// // Funcion para desencriptar  
-// function decryptionWord (word){
-//   let palabra = word; // j ober enter n enter s
-//   // Resultado= jovenenters 
-//   // palabra = palabra.replace("ai", "a");
-//   // palabra = palabra.replace("ober", "o");
-//   let i = 0
-//   let textArray = palabra.split("");
-//   for (let property in dictionary){
-//     textArray[i] = palabra.replace(dictionary[property], property);
-//     // while(palabra[i] in dictionary[property]){
-//     //   palabra = palabra.replace(dictionary[property], property);
-//     i++;
-//     // }
-//     // i++;
-//     // console.log((dictionary[property]+ ": " +  property));
-//     // (enter + e)
-//     // Resultado= j o v e n enter s
-//   }let completeWord = textArray.join(""); 
-//   // console.log(palabra);
-//   return completeWord; 
-// }
