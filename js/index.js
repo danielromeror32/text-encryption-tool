@@ -46,6 +46,10 @@ function setText (text){
     let wordEncript = encryptionWord(text);
     // set word 
     document.querySelector(".displayText").textContent = wordEncript;
+    
+    let logoNone = document.querySelector(".logoLookMessage").style.display = "none";
+    document.querySelector(".innerPanel").style.display = "block";
+    
 }
 
 
@@ -73,10 +77,11 @@ function setTextLabel (area){
 // Funcion styles to textArea
 function delateAreaText() {
 
-  if (count === 0){
-    textArea.value = " ";
-    count++;
-  }
+  // if (count === 0){
+  //   textArea.value = " ";
+  //   count++;
+  // }
+  textArea.value = " ";
   textArea.classList.add("editTextArea");
 }
 
