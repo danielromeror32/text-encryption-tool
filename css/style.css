@@ -1,12 +1,3 @@
-
-
-/* .container{
-    background-color: #B2A4FF;
-     width: 80%; 
-    text-align: center;
-    margin: 0 auto;
-} */
-
 body{
     font-family: 'Fira Code', monospace;
     /* font-family: 'Roboto Mono', monospace; */
@@ -160,8 +151,17 @@ footer{
     text-align: center;
     dbackground-color: blueviolet;
 }
+.Contact{
+    font-size: 1rem;
+    margin: 10px;
+}
+.icons{
+    display: inline;
+    width: 1%;
+}
 hr.solid {
     border-top: 3px solid white;
+    margin: 20px;
   }
 
 @media(max-width: 1250px) {

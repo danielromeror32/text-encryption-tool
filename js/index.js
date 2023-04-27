@@ -77,11 +77,11 @@ function setTextLabel (area){
 // Funcion styles to textArea
 function delateAreaText() {
 
-  // if (count === 0){
-  //   textArea.value = " ";
-  //   count++;
-  // }
-  textArea.value = " ";
+  if (count === 0){
+    textArea.value = " ";
+    count++;
+  }
+  // textArea.value = " ";
   textArea.classList.add("editTextArea");
 }
 
@@ -121,23 +121,81 @@ function encryptionWord  (palabra){
 
 
 
-const dictionary = {
+const dict = {
   "e": "enter", 
+  "o": "ober",
   "i": "imes",
   "a": "ai",
-  "o": "ober",
   "u": "ufat"
 }
-// Funcion para desencriptar  
+
 function decryptionWord (word){
-  let palabra = word;
-  // palabra = palabra.replace("ai", "a");
-  // palabra = palabra.replace("ober", "o");
- 
-  for (let property in dictionary){
-    palabra = palabra.replace(dictionary[property], property);
-    // console.log((dictionary[property]+ ": " +  property));
-  }
-  // console.log(palabra);
-  return palabra; 
-}
+  // word:  j ober enter n enter s -  joberventernenters
+  // joven enter s
+  const values = Object.values(dict);
+  const keys = Object.keys(dict);
+  let wordArray = word.split("");
+  let newWord = [];
+  // let resultado =;
+
+  let veri=true;
+  for (let index = 0; index <= values.length; index++) {
+    // const element = wordArray[index];
+
+    // while(word.includes(values[index2]){
+      
+    
+    while (veri === true){
+      if(word.includes(values[index]) ){
+        word = word.replace(values[index], keys[index]);
+        veri=true;
+      }else{
+          veri=false;
+        }
+      } 
+      if(word.includes(values[index]) ){
+        word = word.replace(values[index], keys[index]);
+      }
+    
+
+
+
+    
+    // if(word.includes(values[index]) ){
+    //   word = word.replace(values[index], keys[index]);
+    // }
+  } 
+    console.log(word);
+    }
+    
+    // return word; 
+  
+  
+
+
+  
+
+
+
+// // Funcion para desencriptar  
+// function decryptionWord (word){
+//   let palabra = word; // j ober enter n enter s
+//   // Resultado= jovenenters 
+//   // palabra = palabra.replace("ai", "a");
+//   // palabra = palabra.replace("ober", "o");
+//   let i = 0
+//   let textArray = palabra.split("");
+//   for (let property in dictionary){
+//     textArray[i] = palabra.replace(dictionary[property], property);
+//     // while(palabra[i] in dictionary[property]){
+//     //   palabra = palabra.replace(dictionary[property], property);
+//     i++;
+//     // }
+//     // i++;
+//     // console.log((dictionary[property]+ ": " +  property));
+//     // (enter + e)
+//     // Resultado= j o v e n enter s
+//   }let completeWord = textArray.join(""); 
+//   // console.log(palabra);
+//   return completeWord; 
+// }
