@@ -1,22 +1,4 @@
-body{
-    font-family: 'Fira Code', monospace;
-    /* font-family: 'Roboto Mono', monospace; */
-    background-color: #E5E5E5;
-    margin-top: 10px;
-}
 
-h1{
-    margin-top: 30px;
-    margin-left: 12px;
-    color: #0A3871;
-    margin-bottom: 3rem;;
-    font-size: 32px;
-
-}
-/* div {
-    display: inline-block;
-    width: 40%;
-  } */
 
 /* .container{
     background-color: #B2A4FF;
@@ -25,19 +7,37 @@ h1{
     margin: 0 auto;
 } */
 
+body{
+    font-family: 'Fira Code', monospace;
+    /* font-family: 'Roboto Mono', monospace; */
+    background-color: #E5E5E5;
+    /* margin-top: 10px; */
+    font-size: 22px;
+    text-align: justify;
+}
+
+h1{
+    margin-bottom: 3rem;
+    
+}
+
+#title{
+    font-size: 3rem;
+    color: #0A3871;
+}
 
 .container{
     /* background-color: aquamarine; */
     width: auto;
-    height: 944px;
+    /* height: 944px; */
     height: 660px;
 }
 
 .firstPanel{
     
     /* background-color: #0A3871; */
-    float: left;
-    width: 660px;
+    float: left; 
+    width: 740px;
     height: 80%;
     margin: 10px 0px 0 100px;
     /* padding: 10px; */
@@ -74,19 +74,14 @@ outline: none;
     background-color:white;
     border-radius: 20px;
     float: right;
-    width: 400px;
+    width: 350px;
     height: 95%;
     margin: 10px 32px 0 0px;
     display: flex;
     flex-direction: column;
-    
     align-items:center;
-   
-    
 }
-.btnFirstPanel{
-    text-align: justify;
-}
+
 #firstButton{
     display: inline-block;
     background-color: #1A237E;
@@ -94,8 +89,8 @@ outline: none;
 }
 #secondtButton{
     display: inline-block;
-    background-color: white;
-    color: black;
+    background-color: #D8DFE8;
+    color: #1A237E;
     margin:10px 0 0 20px; 
 }
 
@@ -112,7 +107,7 @@ button{
 }
 .buttom-decrypt{
     background-color: white;
-    color: black;
+    color: #1A237E;
     margin-top: 60px;
     margin-left: 20%;
   
@@ -139,6 +134,9 @@ button{
 }
 
 
+.textM{
+    margin-left: 10px;
+}
 .displayText{
     color: #808080;
     font-size: 17px;
@@ -150,13 +148,147 @@ button{
     /* display: none; */
     /* position: relative;
     bottom: 160px; */
-    text-align: center;
+    /* text-align: center; */
     padding: 25%;
 }
-
+img{
+    display: block;
+}
 
 footer{
     clear: both;
     text-align: center;
-    background-color: blueviolet;
+    dbackground-color: blueviolet;
+}
+hr.solid {
+    border-top: 3px solid white;
+  }
+
+@media(max-width: 1250px) {
+    .container{
+        /* background-color: aquamarine; */
+        height: 660px;
+    }
+    .firstPanel{
+    
+        /* background-color: #0A3871; */
+        float: left; /* media*/
+        width: 376px;
+        height: 80%;
+        margin: 10px 0px 0 100px;
+        /* padding: 10px; */
+    }
+    textarea{
+        width: 376px;
+    }
+    img{
+        width: 100%;
+    }
+    button{
+        width: 157px;
+
+    }
+    img{
+        display: block;
+    }
+    #title{
+        font-size: 32px;
+    }
+
+}
+
+@media (max-width: 940px) {
+    .container{
+        
+        /* background-color: aquamarine; */
+        width: 100%;
+        height: 100%;
+        
+    }
+    .firstPanel{
+        float: none;
+        display: block;
+        height: 600px;
+        margin: 10px 0px 0 20px;
+        /* background-color: #0A3871; */
+        
+        /* float: none;
+        display: block;
+        width: 100%;
+        height: 80%;
+        margin: 10px 0px 0 100px;
+        padding: 10px;
+         */
+    }
+    .secondPanel{
+        
+        display: block;
+        float: left;
+
+        width: 370px;
+        height: 200px;
+        margin: 50px 0px 50px 10px;
+        padding: 10px;
+        /* background-color:white;
+        border-radius: 20px;
+        float: right;
+        width: 400px;
+        height: 95%;
+        margin: 10px 32px 0 0px;
+        display: flex;
+        flex-direction: column;
+        align-items:center; */
+        flex-direction: row;
+    }
+    .innerPanel{
+        width: 300px;
+        height: 190px;
+        
+    }
+    .displayText{
+        color: #808080;
+    font-size: 17px;
+    padding: 0; 
+     height: 0; 
+    margin-bottom: 0;
+    }
+    textarea{
+        width: 320px;
+        
+    }
+       
+    
+    .buttom-decrypt{
+        
+        background-color: white;
+        color: #1A237E;
+        margin-top: 50px;
+        margin-left: 30%;
+      
+    }
+    p, textarea{
+        margin: 0;
+        font-size: 17px;
+    }
+    p{
+        height: auto;
+    }
+    #title{
+        font-size: 22px;
+    }
+    img{
+        display: none;
+    }
+    button{
+        width: 157px;
+        margin: 10px 0 0 4px;
+
+    }
+    .displayText {
+        color: #808080;
+        font-size: 17px;
+        padding: 30px;
+        /* height: 303px; */
+        /* margin-bottom: 105px; */
+    }
 }
