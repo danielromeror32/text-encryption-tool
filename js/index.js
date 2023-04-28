@@ -1,14 +1,15 @@
-const buttonEncip = document.querySelector("#firstButton");
-const buttonDesc = document.querySelector("#secondtButton");
+const buttonEncip = document.querySelector("#firstButton");// BUTTON Encryption
+const buttonDesc = document.querySelector("#secondtButton"); // BUTTON Decryption
 const buttonCopy = document.querySelector(".buttom-decrypt"); // BUTTON COPY
-const textArea =document.querySelector("#textArea");
-// const textScondPanel = document.querySelector(".displayText").textContent;
-var textScondPanel = document.querySelector(".displayText").textContent;
+const textArea =document.querySelector("#textArea"); 
+const textScondPanel = document.querySelector(".displayText").textContent; // Text of second panel
 
 let textEncryption ;
 let textDecryption ;
 let textCopied;
 let count= 0;
+
+// ----------------------------EVENTS--------------------------------------
 
 // button event Encryption
 buttonEncip.addEventListener("click", function() {
@@ -28,29 +29,20 @@ function copyToClipboard() {
 
 // button event Decryption
 buttonDesc.addEventListener("click", function() {
-  // textDecryption = setText(textEncryption); 
-  // textDecryption = decryptionWord(textCopied);
   textEncryption = getText("textarea"); // extraer texto 
   textDecryption = setTextLabel(textEncryption);
-  // console
-  // textDecryption = setTextLabel(textEncryption);
-  // textDecryption = decryptionWord(textEncryption); // desencriptar devuelve nuevo valor 
-  // mostrar en 2do panel 
-
 });
+
+// ----------------------------FUNCTIONS--------------------------------------
 
 
 // Function for pass text to second panel 
 function setText (text){
-    //Encriptar palabra 
-    let wordEncript = encryptionWord(text);
-    // set word 
-    document.querySelector(".displayText").textContent = wordEncript;
-    
+    let wordEncript = encryptionWord(text);//Encriptar palabra 
+    document.querySelector(".displayText").textContent = wordEncript; // // set word 
     // Aparecer y desaparecer logo de inicio 
     let logoNone = document.querySelector(".logoLookMessage").style.display = "none";
     document.querySelector(".innerPanel").style.display = "block";
-    
 }
 
 
@@ -59,7 +51,6 @@ function getText(area){
     let extractText = document.querySelector(area); // Select content to textarea
     var text = extractText.value;
     extractText.value = '';
-    // alert(text);
     return text.toLowerCase();
 }
 
@@ -69,24 +60,24 @@ function setTextLabel (area){
   // Aparecer y desaparecer logo de inicio 
   let logoNone = document.querySelector(".logoLookMessage").style.display = "none";
   document.querySelector(".innerPanel").style.display = "block";
-  // Desencriptar y enviar a panel 2
-  textDecryption = decryptionWord(textEncryption);
+  textDecryption = decryptionWord(textEncryption); // Desencriptar y enviar a panel 2
   document.querySelector(".displayText").textContent = textDecryption; // print at second panel 
-  
 }
+
+
 // Funcion styles to textArea
 function delateAreaText() {
-
   if (count === 0){
     textArea.value = " ";
     count++;
   }
-  // textArea.value = " ";
   textArea.classList.add("editTextArea");
 }
 
+// ----------------------------FUNCTIONS ENC/DES--------------------------------------
 
-// Funcion para encriptar 
+
+// Fnction for Encryption. MODE 1
 function encryptionWord  (palabra){
   let newTextArray = [];
   // let textArray = textEncryption.split("");
@@ -129,7 +120,7 @@ const dict = {
   "i": "imes",  
   "u": "ufat",
 }
-
+// Fnction for decryption. MODE 2
 function decryptionWord (word){
   // word:  j ober enter n enter s -  joberventernenters resultado esperado:jovenes
   const values = Object.values(dict); // enter, oober, imes, ai, ufat
