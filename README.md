@@ -4,9 +4,9 @@ This is a project developed in HTML, CSS & JS with the goal of creating a word e
 This project belongs to the #challengeonecodificador5* 
 
 ## Encryption Method
-The encryption "keys" are as follows:
-The letter "e" is converted to "enter".
-The letter "i" is converted to "imes".
-The letter "a" is converted to "ai".
-The letter "o" is converted to "ober".
-The letter "u" is converted to "ufat".
+- The encryption "keys" are as follows:
+- The letter "e" is converted to "enter".
+- The letter "i" is converted to "imes".
+- The letter "a" is converted to "ai".
+- The letter "o" is converted to "ober".
+- The letter "u" is converted to "ufat".
